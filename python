@@ -1,0 +1,31 @@
+import random
+import string
+
+# This function generates a random password with specified length and complexity.
+def generate_password(length, complexity):
+    # First, we define an empty string to store the allowed characters.
+    allowed_chars = ''
+
+    # We use conditional statements to add the appropriate characters based on the complexity parameter.
+    if complexity >= 1:
+        allowed_chars += string.ascii_lowercase
+    if complexity >= 2:
+        allowed_chars += string.ascii_uppercase
+    if complexity >= 3:
+        allowed_chars += string.digits
+
+    # Finally, we use a loop to generate a random password by choosing characters from the allowed characters.
+    password = ''
+    for i in range(length):
+        password += random.choice(allowed_chars)
+
+    return password
+
+if __name__ == '__main__':
+    # Here, we specify the length and complexity of the password we want to generate.
+    length = 12
+    complexity = 3
+
+    # We call the generate_password function with the specified parameters and print the resulting password.
+    password = generate_password(length, complexity)
+    print("Your randomly generated password is:", password)
