@@ -24,7 +24,7 @@ Make changes and commit them to your local branch
 Push your changes to your forked repository
 Submit a pull request to the original repository
 Credits
-This project was created by [Your Name] as a small mini project in Python.
+This project was created by Shivang Sinha as a small mini project in Python.
 
 References
 Python Random Module
